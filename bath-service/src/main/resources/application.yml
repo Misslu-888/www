@@ -1,0 +1,22 @@
+#端口号
+server:
+  port: 8081
+
+#mybatis-plus
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/bath-center?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&useSSL=false
+    username: root
+    password: root
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml #指定mapper.xml位置
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #输出sql日志
+    default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler #枚举转换器
+eureka:
+  client:
+    # 注册中心服务地址，你要向哪个注册中心注册
+    service-url:
+      defaultZone: http://localhost:10086/eureka/,http://localho
